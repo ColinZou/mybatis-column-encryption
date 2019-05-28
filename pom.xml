@@ -5,8 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.stableforever</groupId>
     <artifactId>mybatis-column-data-encryption</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <packaging>jar</packaging>
+    <name>mybatis-column-data-encryption</name>
+    <description>A MyBatis based column data encryption lib.</description>
+    <url>https://github.com/ColinZou/mybatis-column-encryption</url>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
@@ -18,6 +21,16 @@
             <email>zoukaiping@gmail.com</email>
         </developer>
     </developers>
+    <licenses>
+        <license>
+            <name>MIT</name>
+            <url>https://raw.githubusercontent.com/ColinZou/mybatis-column-encryption/master/LICENSE</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <scm>
+        <url>git@github.com:ColinZou/mybatis-column-encryption.git</url>
+    </scm>
     <dependencies>
         <dependency>
             <groupId>org.mybatis</groupId>
@@ -71,6 +84,19 @@
                         <id>attach-sources</id>
                         <goals>
                             <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.9.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
                         </goals>
                     </execution>
                 </executions>
