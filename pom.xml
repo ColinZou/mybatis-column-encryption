@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.stableforever</groupId>
     <artifactId>mybatis-column-data-encryption</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <packaging>jar</packaging>
     <name>mybatis-column-data-encryption</name>
     <description>A MyBatis based column data encryption lib.</description>
@@ -40,7 +40,7 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.9.9</version>
+            <version>2.9.9.2</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>

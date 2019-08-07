@@ -1,6 +1,8 @@
 package com.stableforever.mybatis.encryption.alias;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.stableforever.mybatis.encryption.StringEncryptorProvider;
+import com.stableforever.mybatis.encryption.spi.StringEncryptor;
 import org.apache.ibatis.type.Alias;
 
 import java.io.Serializable;
@@ -39,6 +41,10 @@ public class EncryptedString implements Serializable {
     public String toString() {
         if (this.isEmpty()) {
             return null;
+        }
+        StringEncryptor encryptor = StringEncryptorProvider.getEncryptor();
+        if (null != encryptor) {
+            return encryptor.encrypt(this.value);
         }
         return this.value;
     }
