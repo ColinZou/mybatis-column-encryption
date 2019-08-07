@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.stableforever</groupId>
     <artifactId>mybatis-column-data-encryption</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.2-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>mybatis-column-data-encryption</name>
     <description>A MyBatis based column data encryption lib.</description>
@@ -113,4 +113,28 @@
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
+    <profiles>
+        <profile>
+            <id>archiva-deploy</id>
+            <properties>
+                <private.repo.url>http://dev-base-maven.canguanwuyou.com/repository/snapshots/</private.repo.url>
+            </properties>
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>archiva-dev-snapshots-deploy</id>
+                    <url>${private.repo.url}</url>
+                    <name>local archiva snapshot repo</name>
+                    <layout>default</layout>
+                    <uniqueVersion>false</uniqueVersion>
+                </snapshotRepository>
+                <repository>
+                    <id>archiva-dev-snapshots-deploy</id>
+                    <url>${private.repo.url}</url>
+                    <name>local archiva snapshot repo</name>
+                    <layout>default</layout>
+                    <uniqueVersion>false</uniqueVersion>
+                </repository>
+            </distributionManagement>
+        </profile>
+    </profiles>
 </project>
