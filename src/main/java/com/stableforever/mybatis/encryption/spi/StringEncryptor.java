@@ -8,15 +8,15 @@ package com.stableforever.mybatis.encryption.spi;
 public interface StringEncryptor {
     /**
      * 加密
-     * @param raw
-     * @return
+     * @param raw   raw string
+     * @return encrypted/encoded string
      */
     String encrypt(String raw);
 
     /**
      * 解密
-     * @param encrypted
-     * @return
+     * @param encrypted encrypted string
+     * @return decrypted/decoded string
      */
     String decrypt(String encrypted);
 }

@@ -38,10 +38,10 @@
 <dependency>
     <groupId>com.stableforever</groupId>
     <artifactId>mybatis-column-data-encryption</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.3</version>
 </dependency>
 ```
-
+如果此版本使用有问题（可能MAVEN仓库还在同步当中），请暂时使用版本号0.0.1。
 ### 3. 在数据模型当中使用EncryptedString作为要加密的字段类型
 
 示例如下：

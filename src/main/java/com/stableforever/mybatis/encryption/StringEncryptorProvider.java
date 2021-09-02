@@ -18,7 +18,7 @@ public class StringEncryptorProvider {
     /**
      * 读取字符串加密器
      *
-     * @return
+     * @return StringEncryptor
      */
     public static StringEncryptor getEncryptor() {
         // 加载StringEncryptor
