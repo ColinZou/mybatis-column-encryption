@@ -38,7 +38,7 @@
 <dependency>
     <groupId>com.stableforever</groupId>
     <artifactId>mybatis-column-data-encryption</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.1</version>
 </dependency>
 ```
 
